@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.seleniumhq.selenium:selenium-java:2.45.0'
+    testCompile 'com.saucelabs:sauce_junit:2.1.18'
+    testCompile 'info.cukes:cucumber-java:1.2.2'
+    testCompile 'info.cukes:cucumber-junit:1.2.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
