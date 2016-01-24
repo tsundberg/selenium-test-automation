@@ -14,23 +14,18 @@ and install it.
 
 ### IntelliJ IDEA
 
-The recommended development environment is IntelliJ IDEA. The community version 
-is more then enough for this course.
+The recommended development environment is IntelliJ IDEA. The community version is more then enough for this course. 
 
-Download it from Jet BRAINS [https://www.jetbrains.com/idea/download/](https://www.jetbrains.com/idea/download/) 
-and install it.
+Download it from Jet BRAINS [https://www.jetbrains.com/idea/download/](https://www.jetbrains.com/idea/download/) and install it.
 
 Then open up the preferred build script, Maven or Gradle, and start doing the exercises. 
 
-If you have tools like Eclipse or NetBeans installed and are comfortable to use them, then 
-feel free to do so. Unfortunately, do not expect Thomas to be able to help you 
-to get the sample projects working. He doesn't know anything about either Eclipse or NetBeans.
+If you have tools like Eclipse or NetBeans installed and are comfortable to use them, then feel free to do so. 
+Unfortunately, do not expect Thomas to be able to help you to get the sample projects working. He doesn't know anything about either Eclipse or NetBeans.
 
 ## Build tools
 
-Build tools are strictly not needed, but hey simplifies getting started so you should use one. 
-Use Gradle or Maven. Gradle is easier to get started with, but somewhat slower. 
-Maven is more complicated to get started with, it must be installed locally, but is faster. 
+Build tools are strictly not needed, but hey simplifies getting started so you should use one. Use Gradle or Maven. Gradle is easier to get started with.  Maven is more complicated to get started with, it must be installed locally. 
 
 You can use any of them, the end result is the same.
 
@@ -39,12 +34,13 @@ You can use any of them, the end result is the same.
 Build the project using 
 
 ```
-./gradlew test
+./gradlew test --daemon
 ```
 
 from a command line prompt.
 
-Gradle doesn't have to be installed for this to work. A Gradle version will be downloaded and installed when you run `gradlew`. 
+Gradle doesn't have to be installed for this to work. A Gradle version will be downloaded and installed when you run `gradlew`.
+Specifying `--daemon` will speed up the execution of Gradle.
 
 ### Maven
 
