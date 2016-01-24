@@ -15,15 +15,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>com.rimerosolutions.maven.plugins</groupId>
-                <artifactId>wrapper-maven-plugin</artifactId>
-                <version>0.0.4</version>
-                <inherited>false</inherited>
-                <configuration>
-                    <mavenVersion>3.3.9</mavenVersion>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
     <dependencies>
