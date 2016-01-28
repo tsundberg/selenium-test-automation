@@ -38,4 +38,15 @@ public class HelloWorldTest {
 
         assertThat(actual, is(expected));
     }
+
+    @Test
+    public void hello_world_with_page_object(){
+        String expected = "Hello, world!";
+
+        HelloWorldPage helloWorldPage = new HelloWorldPage(browser);
+
+        String actual = helloWorldPage.getHeadLine();
+
+        assertThat(actual, is(expected));
+    }
 }
