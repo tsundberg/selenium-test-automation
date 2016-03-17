@@ -1,4 +1,4 @@
-package se.thinkcode.selenium;
+package se.thinkcode.selenium.checkboxes;
 
 import org.junit.After;
 import org.junit.Before;

@@ -1,9 +1,8 @@
-package se.thinkcode.selenium;
+package se.thinkcode.selenium.checkboxes;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
 
