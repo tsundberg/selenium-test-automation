@@ -4,7 +4,7 @@ plugins {
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    testCompile 'org.seleniumhq.selenium:selenium-java:2.49.1'
+    testCompile 'org.seleniumhq.selenium:selenium-java:2.52.0'
     testCompile 'com.saucelabs:sauce_junit:2.1.20'
     testCompile 'info.cukes:cucumber-java:1.2.4'
     testCompile 'info.cukes:cucumber-junit:1.2.4'
@@ -12,4 +12,9 @@ dependencies {
 
 repositories {
     mavenCentral()
+}
+
+test {
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
 }
