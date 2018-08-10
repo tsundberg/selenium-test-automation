@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import se.thinkcode.selenium.drivers.WebDriverFactory;
 import se.thinkcode.selenium.form.ConfirmPasswordSentPage;
 import se.thinkcode.selenium.form.RequestPasswordPage;
 
@@ -20,7 +20,7 @@ public class ChangePasswordForLoopTest {
 
     @Before
     public void setUp() {
-        browser = new FirefoxDriver();
+        browser = new WebDriverFactory().createFirefoxDriver();
         baseUrl = "http://selenium.thinkcode.se/requestPassword";
     }
 
@@ -45,7 +45,7 @@ public class ChangePasswordForLoopTest {
     }
 
     private Collection<String> accounts() {
-        Collection<String> accounts = new LinkedList<String>();
+        Collection<String> accounts = new LinkedList<>();
 
         accounts.add("Sune");
         accounts.add("Gretchen");

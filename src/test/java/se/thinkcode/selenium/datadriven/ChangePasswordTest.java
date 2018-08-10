@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import se.thinkcode.selenium.drivers.WebDriverFactory;
 import se.thinkcode.selenium.form.ConfirmPasswordSentPage;
 import se.thinkcode.selenium.form.RequestPasswordPage;
 
@@ -28,7 +28,7 @@ public class ChangePasswordTest {
 
     @Before
     public void setUp() {
-        browser = new FirefoxDriver();
+        browser = new WebDriverFactory().createFirefoxDriver();
         String baseUrl = "http://selenium.thinkcode.se/requestPassword";
         browser.get(baseUrl);
     }

@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import se.thinkcode.selenium.drivers.WebDriverFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,12 +15,11 @@ import static org.junit.Assert.fail;
 public class ExportedHelloWorld {
     private WebDriver driver;
     private String baseUrl;
-    private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
     @Before
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
+        driver = new WebDriverFactory().createFirefoxDriver();
         baseUrl = "http://selenium.thinkcode.se/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }

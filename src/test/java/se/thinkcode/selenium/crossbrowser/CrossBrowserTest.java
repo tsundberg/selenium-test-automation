@@ -6,8 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import se.thinkcode.selenium.drivers.WebDriverFactory;
 import se.thinkcode.selenium.introduction.HelloWorldPage;
 
 import java.util.Collection;
@@ -39,9 +38,7 @@ public class CrossBrowserTest {
     @Test
     public void hello_world(){
         String expected = "Hello, world!";
-
         HelloWorldPage helloWorldPage = new HelloWorldPage(browser);
-
         String actual = helloWorldPage.getHeadLine();
 
         assertThat(actual, is(expected));
@@ -51,8 +48,8 @@ public class CrossBrowserTest {
     public static Collection<WebDriver[]> browsers() {
         List<WebDriver[]> browsers = new LinkedList<WebDriver[]>();
 
-        browsers.add(new WebDriver[]{new HtmlUnitDriver(true)});
-        browsers.add(new WebDriver[]{new FirefoxDriver()});
+        browsers.add(new WebDriver[]{new WebDriverFactory().createHtmlUnitDriver()});
+        browsers.add(new WebDriver[]{new WebDriverFactory().createFirefoxDriver()});
 
         return browsers;
     }
