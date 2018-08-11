@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import se.thinkcode.selenium.drivers.WebDriverFactory;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -16,8 +16,8 @@ public class HelloWorldTest {
 
     @Before
     public void setUp() {
-        browser = new FirefoxDriver();
-        browser.get("http://selenium.thinkcode.se/");
+        browser = new WebDriverFactory().createFirefoxDriver();
+        browser.get(HelloWorldPage.baseUrl);
     }
 
     @After

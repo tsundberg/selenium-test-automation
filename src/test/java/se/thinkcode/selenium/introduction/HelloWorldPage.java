@@ -3,12 +3,12 @@ package se.thinkcode.selenium.introduction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 public class HelloWorldPage {
+    static final String baseUrl = "http://selenium.thinkcode.se/";
     private WebDriver browser;
 
     public HelloWorldPage(WebDriver browser) {

@@ -1,20 +1,22 @@
 package se.thinkcode.selenium.executable.specifications.steps;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import se.thinkcode.selenium.drivers.WebDriverFactory;
 import se.thinkcode.selenium.form.ConfirmPasswordSentPage;
 import se.thinkcode.selenium.form.RequestPasswordPage;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class PasswordHelper {
     private String account;
     private WebDriver browser;
     private ConfirmPasswordSentPage confirmPasswordSentPage;
 
-    public PasswordHelper(String account) {
-        this.account = account;
-        browser = new FirefoxDriver();
+    public PasswordHelper(String browserName) {
+        browser = new WebDriverFactory().createFor(browserName);
         browser.get("http://selenium.thinkcode.se/requestPassword");
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
     }
 
     public void sendRequest() {

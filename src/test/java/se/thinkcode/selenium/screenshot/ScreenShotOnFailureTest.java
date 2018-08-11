@@ -2,7 +2,7 @@ package se.thinkcode.selenium.screenshot;
 
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import se.thinkcode.selenium.drivers.WebDriverFactory;
 import se.thinkcode.selenium.introduction.HelloWorldPage;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -15,7 +15,7 @@ public class ScreenShotOnFailureTest {
     public ScreenShotRule screenShotRule;
 
     public ScreenShotOnFailureTest() {
-        browser = new FirefoxDriver();
+        browser = new WebDriverFactory().createFirefoxDriver();
         screenShotRule = new ScreenShotRule(browser);
     }
 

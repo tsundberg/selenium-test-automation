@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import se.thinkcode.selenium.drivers.WebDriverFactory;
 
 import static org.junit.Assert.assertTrue;
 
@@ -13,7 +13,7 @@ public class SelectColorTest {
 
     @Before
     public void setUp() {
-        browser = new FirefoxDriver();
+        browser = new WebDriverFactory().createFirefoxDriver();
         browser.get("http://selenium.thinkcode.se/");
     }
 
