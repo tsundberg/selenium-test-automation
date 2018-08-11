@@ -14,18 +14,16 @@ import static org.junit.Assert.fail;
 
 public class ExportedHelloWorld {
     private WebDriver driver;
-    private String baseUrl;
     private StringBuffer verificationErrors = new StringBuffer();
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp(){
         driver = new WebDriverFactory().createFirefoxDriver();
-        baseUrl = "http://selenium.thinkcode.se/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown(){
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
@@ -34,8 +32,8 @@ public class ExportedHelloWorld {
     }
 
     @Test
-    public void testExportedHelloWorld() throws Exception {
-        driver.get(baseUrl);
+    public void testExportedHelloWorld(){
+        driver.get(HelloWorldPage.baseUrl);
         driver.findElement(By.id("helloWorld")).click();
         assertEquals("Hello, world!", driver.findElement(By.id("headline")).getText());
     }

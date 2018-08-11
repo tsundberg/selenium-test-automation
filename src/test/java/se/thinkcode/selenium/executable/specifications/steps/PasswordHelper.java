@@ -10,10 +10,13 @@ public class PasswordHelper {
     private WebDriver browser;
     private ConfirmPasswordSentPage confirmPasswordSentPage;
 
-    public PasswordHelper(String account) {
-        this.account = account;
-        browser = new WebDriverFactory().createFirefoxDriver();
+    public PasswordHelper(String browserName) {
+        browser = new WebDriverFactory().createFor(browserName);
         browser.get("http://selenium.thinkcode.se/requestPassword");
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
     }
 
     public void sendRequest() {

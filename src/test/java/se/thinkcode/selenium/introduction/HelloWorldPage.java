@@ -8,6 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 public class HelloWorldPage {
+    static final String baseUrl = "http://selenium.thinkcode.se/";
     private WebDriver browser;
 
     public HelloWorldPage(WebDriver browser) {

@@ -17,7 +17,7 @@ public class HelloWorldTest {
     @Before
     public void setUp() {
         browser = new WebDriverFactory().createFirefoxDriver();
-        browser.get("http://selenium.thinkcode.se/");
+        browser.get(HelloWorldPage.baseUrl);
     }
 
     @After
