@@ -8,8 +8,8 @@ It contains a Maven project and a Gradle project.
 
 ### Java
 
-You must have Java installed. The recommended version is Java 8.
-Download it from Oracle [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+You must have Java installed. The recommended version is Java 10.
+Download it from Oracle [http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)
 and install it.
 
 ### IntelliJ IDEA
@@ -22,6 +22,10 @@ Then open up the preferred build script, Maven or Gradle, and start doing the ex
 
 If you have tools like Eclipse or NetBeans installed and are comfortable to use them, then feel free to do so. 
 Unfortunately, do not expect Thomas to be able to help you to get the sample projects working. He doesn't know anything about either Eclipse or NetBeans.
+
+## WebDriver setup
+
+In file config.properties (\src\test\resources\se\thinkcode\selenium\config\config.properties) set paths do webdriver binaries for Firefox(gekodriver) and Chrome
 
 ## Build tools
 
